@@ -1,0 +1,14 @@
+import sympy as sp
+
+# Define the symbols for the variables
+x, y, z = sp.symbols('x y z')
+
+# Define the multivariable function
+f = x**2 + y**2 + z**2
+
+# Calculate the gradient of the function
+gradient = sp.Matrix([sp.diff(f, var) for var in (x, y, z)])
+
+# Print the gradient
+print("Gradient of f(x, y, z):")
+print(gradient)
